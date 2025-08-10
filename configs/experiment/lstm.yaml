@@ -1,0 +1,16 @@
+# @package _global_
+
+infrastructure:
+  zone: europe-west-c
+  mlflow: 
+    experiment_name: simple-rnn
+    run_name: bs128
+  instance_group_creator: 
+    node_count: 1
+    instance_template_creator:
+      vm_config:
+        machine_type: n1-standard-1
+        accelerator_count: 1
+        accelerator_type: nvidia-tesla-t4
+        vm_type: STANDARD
+        disks: []
